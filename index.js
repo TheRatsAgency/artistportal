@@ -15,14 +15,33 @@ function submitClick() {
 
 }
 
-document.getElementById("addPet").onclick = function() {
+// document.getElementById("addPet").onclick = function() {
 
-    window.alert("more than one record?");
+//     window.alert("more than one record?");
 
-    var myForm = document.getElementById("myForm");
-    var input = document.createElement("input");
-    input.type = "text";
-    var br = document.createElement("br");
-    myForm.appendChild(input);
-    myForm.appendChild(br);
-}
+//     var myForm = document.getElementById("myForm");
+//     var input = document.createElement("input");
+//     input.type = "text";
+//     var br = document.createElement("br");
+//     myForm.appendChild(input);
+//     myForm.appendChild(br);
+// }
+
+
+$(function() {
+  $("#addPet").click(function() {
+    $("#myForm").append($("#myForm .crateRecord:last-child").clone());
+  });
+});
+
+// document.getElementById("addPet").onclick = function() {
+
+//     window.alert("more than one record?");
+
+//     var myForm = document.getElementById("myForm");
+//     var input = document.createElement("input");
+//     input.type = "text";
+//     var br = document.createElement("br");
+//     myForm.appendChild(input);
+//     myForm.appendChild(br);
+// }
